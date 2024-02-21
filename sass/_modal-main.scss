@@ -1,0 +1,65 @@
+@use 'variables';
+
+.modal {
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    background-color: variables.$Black;
+    height: 2800px;
+    padding: 30px;
+    width: 100%;
+    min-width: 375px;
+    max-width: 770px;
+    z-index: 1000;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+
+    &__action {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 180px;
+        height: min-content;
+
+        & img {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+            min-width: 100px;
+        }
+    }
+    &__close {
+        width: 25px;
+        height: min-content;
+        & img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+    &__nav {
+        font-family: 'Josefin Sans';
+        margin-top: 200px;
+        position: relative;
+        width: 100%;
+    }
+    &__li {
+        margin-bottom: 40px;
+        & a {
+            text-transform: uppercase;
+            font-size: 25px;
+            color: variables.$White;
+        }
+    }
+}
+
+@media screen and (min-width : 770px) {
+    .modal {
+        display: none;
+    }
+}

@@ -1,0 +1,82 @@
+@use 'variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Alata';
+    src: url(../Fonts/Alata/Alata-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url(../Fonts/Josefin_Sans/static/JosefinSans-Light.ttf);
+}
+
+body {
+    color: variables.$Dark-Gray;
+    font-family: 'Alata';
+    font-size: 15px;
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+}
+
+h1,
+h2,
+h3 {
+    color: variables.$Black;
+    font-family: 'Josefin Sans';
+    font-weight: 100;
+    font-size: 35px;
+    text-align: center;
+    margin: auto;
+}
+
+p {
+    font-family: 'Alata';
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+}
+
+@media screen and (min-width : 480px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 55px;
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 38px;
+    }
+
+}
+
+@media screen and (min-width : 680px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 75px;
+    }
+
+    p {
+        font-size: 30px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (min-width : 770px) {
+    body {
+        min-width: 740px;
+    }
+}
